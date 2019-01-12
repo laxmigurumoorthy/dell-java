@@ -32,13 +32,11 @@ public class RockPaperScissor {
 	    Scanner userChoice = new Scanner(System.in);
 	    choice=userChoice.next().toLowerCase();
 
-
-
-	    switch (num){
-	    case 0:
-	        String num1 = "rock";
-	        System.out.println("System chose Rock"); 
-	        if (choice.matches(num1)){
+	    if (num==0)
+	    {
+	    	String num1 = "rock";
+	    	System.out.println("System chose Rock"); 
+	    	if (choice.matches(num1)){
 	            System.out.println("Its a tie!");
 
 	            }
@@ -53,9 +51,11 @@ public class RockPaperScissor {
 	            System.out.println();
 	            System.out.println("ERROR: Please choose Rock, Paper or Scissors");
 	        }
-	    break;
-	    case 1:
-	        String num2 = "paper";
+	    	
+	    }
+	    else if (num==1)
+	    {
+	    	String num2 = "paper";
 	        System.out.println("System chose Paper");
 	        if (choice.matches(num2)){
 	            System.out.println("Its a tie!");
@@ -72,9 +72,10 @@ public class RockPaperScissor {
 	            System.out.println();
 	            System.out.println("ERROR: Please choose Rock, Paper or Scissors");
 	        }
-	    break;
-	    case 2: 
-	        String num3 = "scissors";
+	    }
+	    else if (num==2)
+	    {
+	    	String num3 = "scissors";
 	        System.out.println("System chose Scissors");
 	        if (choice.matches(num3)){
 	            System.out.println("Its a tie!");
@@ -91,10 +92,9 @@ public class RockPaperScissor {
 	            System.out.println();
 	            System.out.println("ERROR: Please choose Rock, Paper or Scissors");
 	        }
-	    break;
-
-
 	    }
+     
+   
 
 	}
 }
