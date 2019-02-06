@@ -47,14 +47,17 @@ public class GradeBookAssignment {
 		    	String[] splitLine = grades.split(",");//Split the grades from the comma separated values
 		    	int[] ints = new int[splitLine.length];
 		    	 double sum=0;
-		    	 //Loop to parse the splitline array and calculate the sum 
+		    	 //Loop to parse the splitline array and calculate t he sum 
 		    	for (int j=0;j< splitLine.length;j++)
 		    	{
 		    		ints[j]=Integer.parseInt(splitLine[j]);
 		    		sum = sum + ints[j]; //Summation of grades
 		    	}
 		    	//Helper method to calculate the Average
-		    	CalculateAverage(Studentgrades,sum,splitLine);
+		    	double Average = CalculateAverage(Studentgrades,sum,splitLine);
+		    	
+		    
+		    	
 		    	
 		    }
 		  		    
@@ -66,7 +69,7 @@ public class GradeBookAssignment {
 	//Map<String,double>StudentAverage - Stores the Name and the Average and prints the same from the Map.
 	//Sum is the value of adding the grades calculated above in the main method
 	//splitline is an array to store the grades
-	public static void CalculateAverage (HashMap<String,String> Studentgrades, double sum,String[] splitLine)
+	public static double CalculateAverage (HashMap<String,String> Studentgrades, double sum,String[] splitLine)
 	{
 		 double Average =0;
 		String CurrentName="";
@@ -82,7 +85,11 @@ public class GradeBookAssignment {
 		   Map<String,Double> StudentAverage = new HashMap<String,Double>();
 		   StudentAverage.put(CurrentName, Average);
 		   //Print the Map
+		   
 		   System.out.println(StudentAverage);
+		   
+		   return Average;
+		  
 		
 	}
 	
